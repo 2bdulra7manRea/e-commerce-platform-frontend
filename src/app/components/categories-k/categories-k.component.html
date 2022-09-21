@@ -1,0 +1,19 @@
+<div class="cate-bar" >
+    <div class="header-cate-bar">
+        
+        <h4>{{title}}</h4>
+    </div>
+    <div>
+        <ul>
+            <li *ngFor="let obj of lists">
+                <a  routerLink="{{obj.path}}" [state]="{title:obj.content}" > {{obj.content}}</a>
+            </li>
+        </ul>
+
+    </div>
+
+
+    <div class="log-out" *ngIf="logOut">
+        <button (click)="logOutUser()">Log out</button>
+    </div>
+</div>

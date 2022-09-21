@@ -1,0 +1,127 @@
+
+
+<div class="row">
+    <div class="col-4">
+        <p>Create a new Product</p>
+    </div>
+</div>
+
+
+<div class="alert alert-danger" *ngIf="errorIsFound" role="alert">
+    Something wrong please make sure you filled the form 
+  </div>
+
+
+<div class="row mb-5">
+    <div class="col-10">
+        <form class="product-form" [formGroup]="productForm" >
+            <div class="row mt-2">
+                <div class="col-12">
+                    <mat-form-field class="w-field" appearance="outline" >
+                        <mat-label>name</mat-label>
+                        <input matInput placeholder="Enter the product name" formControlName="name" required>
+                        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                      </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-12">
+                    <mat-form-field class="w-field" appearance="outline">
+                        <mat-label>Description</mat-label>
+                        <textarea style="resize:none;" rows="20" formControlName="content" matInput placeholder="Enter the product description"  required></textarea>
+                        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                      </mat-form-field>
+                </div>
+            </div>
+
+
+            <div class="row mt-2">
+                <div class="col-12">
+                    <mat-form-field class="w-field" appearance="outline">
+                        <mat-label>Price</mat-label>
+                        <input matInput placeholder="Enter the product price" formControlName="price" >
+                        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                      </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-12">
+                    <mat-form-field class="w-field" appearance="outline">
+                        <mat-label>Discount</mat-label>
+                        <input matInput placeholder="Enter the product discount" formControlName="discount">
+                        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                      </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-12">
+                    <mat-form-field class="w-field" appearance="outline">
+                        <mat-label>Quantity</mat-label>
+                        <input matInput placeholder="Enter the product quantity" formControlName="quantity" >
+                        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                      </mat-form-field>
+                </div>
+            </div>
+
+
+            <div class="row mt-2">
+                <div class="col-12">
+                    <mat-form-field class="w-field" appearance="outline">
+                        <mat-label>Code</mat-label>
+                        <input matInput placeholder="Enter the product code" formControlName="code" >
+                        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                      </mat-form-field>
+                </div>
+            </div>
+
+
+            <div class="row mt-2">
+                <div class="col-12">
+                    <mat-form-field class="w-field" appearance="outline">
+                        <mat-label>Country of origin</mat-label>
+                        <mat-select formControlName="countryOfOrigin" >
+                            <mat-option value="china">china</mat-option>
+                            <mat-option value="germany">germany</mat-option>
+                          </mat-select>
+                      </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-12">
+                    <mat-form-field  class="w-field" appearance="outline">
+                        <mat-label>Category</mat-label>
+                        <mat-select formControlName="category" >
+                            <ng-container *ngIf="!!categoriesList" >
+                            <mat-option *ngFor="let x of categoriesList" [value]="x._id">{{x.title}}</mat-option>
+                            </ng-container>
+                          </mat-select>
+                      </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-12">
+                    <mat-form-field class="w-field" appearance="outline">
+                        <mat-label>information</mat-label>
+                        <textarea style="resize:none" formControlName="information" rows="10" matInput placeholder="Enter the product information"></textarea>
+                        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                      </mat-form-field>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="row mb-5">
+    <div class="col-3">
+        <button (click)="goBack()" class="n1-light-btn">Back</button>
+    </div>
+    <div class="col-3">
+        <button  (click)="submit()" class="n1-dark-btn">Save</button>
+    </div>
+</div>

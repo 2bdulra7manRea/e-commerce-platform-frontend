@@ -1,0 +1,65 @@
+
+
+
+<div class="auth-header">
+
+    <h1>Sign In</h1>
+    
+</div>
+
+<div class="error-message" *ngIf="errorIsFound">
+    <p>Sorry ! there is something happens wrong.Your password or email is not right</p>
+</div>
+
+
+<div class="login-page">
+<form [formGroup]="loginForm"  class="form-user">
+
+
+<div class="control-input-zeit">
+    <label>Email</label>
+    <input type="email" placeholder="Please Enter Your Email" formControlName="email" >
+</div>
+
+<div class="control-input-zeit">
+    <label>Password</label>
+    <input type="text" placeholder="Please Enter Your Password" formControlName="password" >
+</div>
+
+
+<div class="control-btn-zeit">
+    <ng-container *ngIf="isSubmited" >
+        <button><div class="spinner-border text-light" role="status">
+            <span class="sr-only">Loading...</span>
+          </div></button>
+    </ng-container>
+
+  <button (click)="submitForm()" *ngIf="!isSubmited" >
+    sign in
+  </button>
+</div>
+
+<div class="policy">
+    <p>We treat your 
+personal data with care; please find our privacy notice here.</p>
+</div>
+
+
+</form>
+
+
+
+<div class="login-actions">
+
+<div >
+    <h6>Don't have an account?</h6>
+</div>
+
+<div>
+    <button (click)="goToRegister()" >Create an account</button>
+</div>
+
+</div>
+
+
+</div>

@@ -1,0 +1,22 @@
+
+<div class="filter-box">
+
+<div class="top-filter">
+<h4>Our Trendy Products</h4>
+
+<div class="filter-btn">
+    <button  (click)="filterList('all')"   [ngClass]="{'hover-btn':currentFilter==='all'}"     >All</button>
+    <button  (click)="filterList('popular')"  [ngClass]="{'hover-btn':currentFilter==='popular'}"   >Popular</button>
+    <button  (click)="filterList('topSale')" [ngClass]="{'hover-btn':currentFilter==='topSale'}"   >Top Sale</button>
+    <button  (click)="filterList('bestRated')" [ngClass]="{'hover-btn':currentFilter==='bestRated'}"   >Best Rated</button>
+</div>
+</div>
+
+</div>
+
+<div class="product-list" *ngIf="!!productsList" >
+    <div class="cover-box">
+<app-card-k-pro *ngFor="let item of productsList" [item]="item" ></app-card-k-pro>
+    </div>
+</div>
+

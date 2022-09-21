@@ -1,0 +1,9 @@
+<header-account></header-account>
+<div class="row mt-5">
+    <div class="col-3 p-3">
+        <categories-bar [lists]="customerList" title="'My Account'" [logOut]="true" ></categories-bar>
+    </div>
+    <div class="col-9">
+    <router-outlet></router-outlet>
+    </div>
+</div>

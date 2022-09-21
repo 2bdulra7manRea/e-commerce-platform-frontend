@@ -1,0 +1,62 @@
+
+
+
+<hr>
+<div class="row">
+    <div class="col-12 header-title">
+        <h1 *ngIf="!!title" >{{title}}</h1>
+    </div>
+</div>
+<hr>
+
+
+
+
+<div class="row">
+    <div class="col-3">
+    <filter-category></filter-category>
+    </div>
+    <div class="col-9">
+
+
+
+        <div class="row">
+            <div class="col-3">
+                        <mat-form-field  class="w-field" appearance="outline">
+                            <!-- <mat-label>Category</mat-label> -->
+                            <mat-select [(ngModel)]="sortType" (ngModelChange)="sortRun()">
+                                <mat-option value="">Sort : by Relevance</mat-option>
+                                <mat-option  [value]="{sort:'price',order:'ASC'}">Price Low To High</mat-option>
+                                <mat-option  [value]="{sort:'price',order:'DESC'}">Price High To Low</mat-option>
+                                <mat-option  [value]="{sort:'createdAt',order:'DESC'}">Newness</mat-option>
+                                <mat-option [value]="4">Rating</mat-option>
+                                <mat-option  [value]="5">Popularity</mat-option>
+                              </mat-select>
+                          </mat-form-field>
+            </div>
+        </div>
+
+
+<div class="row" *ngIf="!!productList">
+    <div class="col-12 product-list">
+        <div class="cover-box" style="width:100%;">
+        <app-card-k-pro *ngFor="let x of productList" [item]="x" ></app-card-k-pro>
+    </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2s"></div>
+    <div class="col-6">
+        <mat-paginator (page)="onChangePaginator($event)"  [length]="lengthPage"
+              [pageSize]="pageSize"
+              [pageIndex]="pageIndex"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+        </mat-paginator>
+    </div>
+    <div class="col-4"></div>
+</div>
+
+</div>
+</div>

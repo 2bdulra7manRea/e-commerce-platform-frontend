@@ -1,0 +1,52 @@
+.reivew-user-box{
+    background-color: white;
+    padding:20px;
+    margin:5px 0px;
+    .row{
+    div{
+        display: flex;
+        justify-content:left;
+        align-items: center;
+    }
+}
+}
+
+.w-field{
+    width:100%;
+}
+
+.col-6{
+justify-content:right !important;
+}
+.user-image{
+    border-radius:100%;
+    width:60px;
+    height:60px;
+    background-color: rebeccapurple;
+    overflow: hidden;
+    img{
+        object-fit: cover;
+    }
+}
+
+.text-content{
+    font-size:18px;
+    font-style:italic;
+    line-height:1.4;
+    width:95%;
+}
+
+.action-btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-around !important;
+    button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size:20px;
+        &:hover{
+            color: orange;
+        }
+    }
+}

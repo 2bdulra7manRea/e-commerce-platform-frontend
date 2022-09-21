@@ -1,0 +1,46 @@
+.item-basket{
+    margin:10px 0px;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    background-color: white;
+    cursor: pointer;
+
+    a{
+        color: black;
+        font-weight:bold;
+        text-transform: capitalize;
+        &:hover{
+            color: orangered;
+
+        }
+    }
+
+    &:hover{
+        background-color: lightblue;
+    }
+    div{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:10px;
+        height:100px;
+        &:first-child{
+            padding:0px;
+            background-color: rebeccapurple;
+        }
+    }
+
+}
+
+.info-order-basket{
+    color: black;
+    font-weight: bold;
+    font-size:20px;
+}
+
+.col-3{
+    button{
+        margin:0px 5px;
+    }
+}

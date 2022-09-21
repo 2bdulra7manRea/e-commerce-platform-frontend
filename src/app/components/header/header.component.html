@@ -1,0 +1,48 @@
+<div class="header-nav-bar-k">
+
+    <ul>
+        <li>
+            <span class="over"></span>
+            <a routerLink="/home" >Home</a>
+        </li>
+        <li>
+            <a routerLink="/category/123921">Category</a>
+        </li>
+        <li>
+            <a routerLink="/h/home" >Brands</a>
+        </li>
+        <li>
+            <a routerLink="/h/catergory/123921">Customer service</a>
+        </li>
+    </ul>
+
+    <div class="main-title">
+        <h1 style="font-weight:bold; font-size:30px" >E-shop</h1>
+    </div>
+
+
+    <ul>
+        <li>
+            <a routerLink="/home">About us</a>
+        </li>
+        <li>
+            <a routerLink="/home">Track order</a>
+        </li>
+        <li>
+            <a routerLink="/home">Our shops</a>
+        </li>
+        <li>
+            <ng-container *ngIf="isAuthenticated; else showlogin" >
+                <button class="n1-dark-btn"  (click)="goToMyAccount()">My Account</button>
+            </ng-container>
+            <ng-template #showlogin>
+                <a routerLink="/auth/login">Login</a>
+            </ng-template>
+        </li>
+    </ul>
+
+
+
+<!-- <div class="header-circle" #lop ></div> -->
+</div>
+

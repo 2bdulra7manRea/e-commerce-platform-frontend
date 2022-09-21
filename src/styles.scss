@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing:border-box !important;
+    margin:0px;
+    padding:0px;
+}
+.row {
+    margin-left:0px !important;
+    margin-right:0px !important;
+}
+.n1-dark-btn{
+    background-color: black;
+    display: block;
+    color: white;
+    border: none;
+    outline: none;
+    width:100%;
+    padding:10px;
+    text-decoration: none;
+    text-align: center;
+    &:hover{
+        outline: none;
+        border: none;
+        color: white;
+    }
+}
+
+.n1-light-btn{
+    background-color: lightgray;
+    display: block;
+    color: black;
+    border: none;
+    outline: none;
+    width:100%;
+    padding:10px;
+    text-decoration: none;
+    text-align: center;
+    &:hover{
+        outline: none;
+        border: none;
+        color: black;
+    }
+}
+
+.product-list{
+    display: flex;
+    justify-content: center;
+.cover-box{
+    width:90%;
+    display: flex;
+    flex-wrap: wrap;
+    padding:10px;
+    }
+}
+
+.center-flex{
+    display: flex;
+    justify-content: center;
+}
+.header-title{
+    padding:30px 0px;
+    text-align: center;
+    h1{
+        font-size:30px;
+        font-style: italic;
+        font-weight: bold;
+    }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

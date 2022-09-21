@@ -1,0 +1,36 @@
+.search-bar-k{
+    border:1.5px solid lightgray;
+    width:100%;
+    background-color: white;
+    display: flex;
+}
+.border-k{
+    height:100%;
+    padding:1px;
+    border-left:1px solid lightgray;
+}
+.icon-k{
+    background-color: black;
+    color: white;
+    width:5%;
+}
+.search-k{
+    width:65%;
+    padding:10px 0px;
+    input{
+        border: none;
+        outline: none;
+        padding:10px;
+        width:100%;
+        border-right:1px solid lightgray;
+    }
+
+}
+
+
+.filter-k{
+    padding:10px 0px;
+    width:30%;
+    text-align: center;
+    color: gray;
+}

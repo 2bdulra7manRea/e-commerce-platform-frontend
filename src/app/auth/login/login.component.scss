@@ -1,0 +1,106 @@
+
+.login-page{
+    padding:30px 0px;
+}
+
+
+.auth-header{
+    margin:10px 0px;
+    text-align: center;
+    width:100%;
+    border-top:1px groove lightgray;
+    border-bottom:1px groove lightgray;
+    padding:20px 0px;
+}
+
+.error-message{
+    width:100%;
+    padding:10px;
+    background-color: pink;
+    color: black;
+    text-align: center;
+}
+
+.form-user{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: white;
+>div{
+width:65%;
+padding:10px;
+margin:7px 0px;
+input {
+width:100%;
+border:1px solid black;
+padding:10px 5px;
+&:focus-within{
+    outline:1.5px groove black;
+}
+
+&::placeholder{
+    font-size:12px;
+    color: gray;
+}
+
+}
+
+button {
+    background-color: black;
+    display: block;
+    color: white;
+    border: none;
+    outline: none;
+    width:100%;
+    padding:10px;
+}
+
+label{
+    color: black;
+    margin:5px 0px;
+}
+
+
+}
+
+
+}
+
+.login-actions{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: white;
+
+
+>div:first-child{
+    border-top:1px groove gray;
+}
+
+
+>div {
+    width:65%;
+    padding:10px;
+    margin:5px 0px;
+
+    button {
+        background-color: white;
+        display: block;
+        color: black;
+        border:1px solid black;
+        outline: none;
+        width:100%;
+        padding:10px;
+
+    }
+}
+
+}
+
+.policy{
+    text-align: center;
+    color: gray;
+}

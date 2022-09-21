@@ -1,0 +1,103 @@
+<div class="row" *ngIf="!!product" >
+    <div class="col-12">
+
+
+<div class="row mb-5">
+    <div class="col-6">
+        <div class="image-product">
+            <img src="../../../../assets/images/1.jpg" width="100%" alt="product-image">
+        </div>
+    </div>
+    <div class="col-6">
+        <h1>{{product.name}}</h1>
+        <h2 style="font-weight:bold" >${{product.price}}</h2>
+        <hr>
+        <div class="row quantity-box">
+            <div class="col-4">
+                <button (click)="increase()" >+</button>
+            </div>
+            <div class="col-4">
+                {{count}}
+            </div>
+            <div class="col-4">
+                <button (click)="decrease()" >-</button>
+            </div>
+        </div>
+        <hr>
+        <div class="action">
+            <button class="n1-dark-btn" (click)="addToBasket()" >Add to your basket</button>
+        </div>
+        <div class="buy-now">
+            <button>Buy Now</button>
+        </div>
+    </div>
+</div>
+
+
+
+<mat-expansion-panel expanded="true" >
+    <mat-expansion-panel-header >
+      <mat-panel-title>
+        <h1>Product description</h1>
+      </mat-panel-title>
+ </mat-expansion-panel-header>
+ <h2>Product Code: {{product.description?.code}} </h2>
+ <p class="bio-centent">
+    {{product.description?.content}}
+</p>  
+</mat-expansion-panel>
+
+
+
+<mat-expansion-panel expanded="true" >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h1>Product specification</h1>
+      </mat-panel-title>
+</mat-expansion-panel-header>
+      <div class="table-k">
+        <table>
+            <tr>
+                <td>Brand</td>
+                <td>{{product.specification?.brand}}</td>
+            </tr>
+            <tr>
+                <td>Country Of Origin</td>
+                <td>{{product.specification?.countryOfOrigin}}</td>
+            </tr>
+            <tr>
+                <td>Category</td>
+                <td>{{product.category?.title}}</td>
+            </tr>
+        </table>
+    </div>
+</mat-expansion-panel>
+
+
+<mat-expansion-panel expanded="true" >
+    <mat-expansion-panel-header  >
+      <mat-panel-title>
+        <h1>Seller Information</h1>
+      </mat-panel-title>
+</mat-expansion-panel-header>
+
+<h2>{{product.sellerId?.brandName}} </h2>
+<p>{{product.sellerId?.brandCountry}}</p>
+<p> {{product.sellerId?.sellerScore}} % Seller Score</p>
+
+</mat-expansion-panel>
+
+
+
+    </div>
+</div>
+
+<div class="row" >
+    <div class="col-3" style="height:300px"></div>
+</div>
+
+<div class="row" *ngIf="!!product" >
+    <div class="col-12">
+        <reivews-product [productId]="product._id" ></reivews-product>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="card-product">
+
+<div class="product-image">
+    <img [src]="image" alt="" class="img" >
+</div>
+
+<div class="product-name">
+    <p (click)="openDetailsPage()"  >{{item.name}}</p>
+</div>
+
+<div class="product-price">
+    <p>
+    ${{item.price}}
+    </p>
+</div>
+
+
+<div class="btn-card-action">
+<ng-container *ngIf="control" >
+ <button class="add-to-cart" (click)="openPage()">Edit</button>    
+<button (click)="removeFromBasket()" >Remove</button>
+</ng-container>
+    <button class="add-to-cart" (click)="addToMyBasket()" *ngIf="!control" >Add to basket</button> 
+</div>
+
+
+
+</div>

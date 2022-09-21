@@ -1,0 +1,71 @@
+
+    <div class="auth-header">
+    
+        <h1>Create an account</h1>
+        
+     </div>
+
+<div class="login-page">    
+    <form [formGroup]="registerForm" class="form-user" >
+    <div class="control-input-zeit">
+        <label>Email</label>
+        <input placeholder="Please Enter Your Email" formControlName="email" type="email" >
+    </div>
+    
+    <div class="control-input-zeit">
+        <label>Password</label>
+        <!-- <button (click)="showPassword()" >Show password</button> -->
+        <input placeholder="Please Enter Your Password" formControlName="password" type="password" >
+    </div>
+
+    <div class="control-input-zeit">
+        <label>Username</label>
+        <input placeholder="Please Enter Your Username" formControlName="username"  type="text" >
+    </div>
+
+    <div class="control-input-zeit">
+        <label>Phone Number <span style="color:gray;" > (Optional)</span> </label>
+        <input placeholder="Please Enter Your Phone Number" formControlName="phoneNumber" type="text" >
+    </div>
+
+
+    <div class="control-input-zeit" *ngIf="userType==='seller'" >
+        <label>Brand name</label>
+        <input placeholder="Please Enter Your Brand Name" formControlName="brandName" type="text" >
+    </div>
+    
+    <div class="control-input-zeit-choose">
+        <button  (click)="selectUser('seller')" [ngClass]="{'btn-active':userType==='seller'}"  >I AM A SELLER</button>
+        <button (click)="selectUser('customer')" [ngClass]="{'btn-active':userType==='customer'}"    >I AM A CUSTOMER</button>
+    </div>
+    
+    <div class="control-btn-zeit">
+      <button (click)="createAccount()" >create account</button>
+    </div>
+    
+    <div class="policy">
+        <p>
+            By creating an account you agree to the website terms 
+            and conditions and our privacy notice.
+        </p>
+    </div>
+    
+    
+    </form>
+    
+    
+    
+    <div class="login-actions">
+    
+    <div >
+        <h6>Already have an account?</h6>
+    </div>
+    
+    <div>
+        <button (click)="goToSignIn()" >sign in</button>
+    </div>
+    
+    </div>
+    
+    
+    </div>

@@ -1,0 +1,37 @@
+<div class="reivew-user-box" *ngIf="!!review" >
+    <div class="row">
+        <div class="col-1">
+            <div class="user-image">
+                <img [src]="'./../../../assets/images/1.jpg'" width="100%" alt="image-user">
+            </div>
+        </div>
+        <div class="col-3">
+            <p style="font-weight:bold;">{{review.customerId?.userId?.username}}</p>
+        </div>
+        <div class="col-6">
+            <p>{{convertTime(review.createdAt)}}</p>
+        </div>
+        <div class="col-2 action-btns" *ngIf="(review.customerId?._id===customerId)&& !editing">
+            <button (click)="removeMyReview(review._id)">
+                <fa-icon [icon]="trash"></fa-icon>
+            </button>
+            <button (click)="editMyReview()">
+                <fa-icon [icon]="edit"></fa-icon>
+            </button>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12 text-content">
+    
+            <ng-container *ngIf="editing">
+                <mat-form-field class="w-field" appearance="outline">
+                    <mat-label>edit Your Review</mat-label>
+                    <textarea style="resize:none" name="reivewss-s" [(ngModel)]="reviewContent" rows="4" matInput placeholder="Write your reivew"></textarea>
+                  </mat-form-field>
+                  <button mat-button color="primary" (click)="submitEdit()" >Edit</button>
+                  <button mat-button color="primary" (click)="cancelEdit()" >Cancel</button>
+            </ng-container>
+            <p *ngIf="!editing" >{{review.reviewContent}}</p>
+        </div>
+    </div>
+    </div>

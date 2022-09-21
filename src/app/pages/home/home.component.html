@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-3" [ngStyle]="{'padding-left':'20px'}">
+        <ng-container *ngIf="categoriesList.length!==0" >
+           <categories-bar [lists]="categoriesList" ></categories-bar> 
+        </ng-container>
+    </div>
+    <div class="col-9">
+        <app-search-k></app-search-k>
+        <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-6"></div>
+    <div class="col-6"></div>
+</div>
+
+<kp-products-list></kp-products-list>
+
+<div class="row">
+    <div class="col-12">
+        <p>view all products</p>
+    </div>
+</div>

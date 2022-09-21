@@ -1,27 +1,40 @@
 # EShop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
+// create two account one for marchent and one for customer
 
-## Development server
+customer can pay / add to cart and has his own page of account 
+can follow the product / shipping
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+each marchent : create account 
+his account has products
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+has option to add product /remove / edit 
+each product may has photos / videos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+Search bar
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+filter bar
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---------------------------------------------------------
+[header]
+[some products]
+[footer]
+-----------------------
+[header]
+[all products]
+-----------------------
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+1- reviews does not update after edit / remove [bug-frontned]
+2- number of items does not decrease in order-baskets [bug-backend]
+
+
+
+
+
+

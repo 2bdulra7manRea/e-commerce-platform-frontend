@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-12">
+
+
+<ng-container *ngIf="!!ordersBaskets">
+
+
+
+<div class="row info-order-basket">
+    <div class="col-6">
+        Total number of products : {{ordersBaskets.totalNumber}}
+    </div>
+    <div class="col-6">
+        Total Price : ${{totalPrice}}
+    </div>
+</div>    
+
+<div class="row item-basket " *ngFor="let item of ordersBaskets.productIds">
+
+<div class="col-2"></div>
+
+<div class="col-4">
+    <a [routerLink]="['/products/product-details',item.productId._id]"   >{{item.productId.name}}</a>
+</div>
+
+<div class="col-1">
+    <p>{{item.quantity}}</p>
+</div>
+
+<div class="col-2">
+<p>${{item.quantity*item.productId.price}}</p>
+</div>
+
+<div class="col-3">
+    <button class="n1-dark-btn" (click)="increaseQuantity(ordersBaskets.customerId,item.productId._id)"  >+</button>
+    <button class="n1-light-btn" (click)="decreaseQuantity(ordersBaskets.customerId,item.productId._id)"  >-</button>
+</div>
+
+</div>
+
+
+
+</ng-container>
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
